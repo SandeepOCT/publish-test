@@ -42,12 +42,21 @@ jobs:
         run: |
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
-          
+
           if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
             # Fetch all branches
             git fetch origin
+
+            # Clean any unstaged changes (stash if necessary)
+            git reset --hard
+
+            # Checkout or create the alpha branch
             git checkout "$ALPHA_BRANCH" || git checkout -b "$ALPHA_BRANCH"
+            
+            # Rebase with main
             git rebase main -f
+
+            # Push the branch after rebase
             git push origin "$ALPHA_BRANCH" --force
             echo "Alpha branch $ALPHA_BRANCH checked out and rebased with main."
           fi
