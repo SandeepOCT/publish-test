@@ -7,7 +7,6 @@ on:
         description: 'Release Type (stable or alpha)'
         required: true
         default: 'stable'
-  
 
 jobs:
   release:
@@ -25,7 +24,7 @@ jobs:
           echo "Current Version: $VERSION"
 
           echo "current_version=$VERSION" >> $GITHUB_OUTPUT
-          echo "current_alpha_branch=origin/${VERSION}-alpha" >> $GITHUB_OUTPUT
+          echo "current_alpha_branch=${VERSION}-alpha" >> $GITHUB_OUTPUT
 
       # Checkout or create version branch for alpha release
       - name: Checkout or create version branch for alpha release
@@ -64,12 +63,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
-            git checkout "${{ steps.version.outputs.current_alpha_branch }}"
-          else
-            git checkout origin/main
-          fi
-
-          npm run release
+        run: npm run release
 
