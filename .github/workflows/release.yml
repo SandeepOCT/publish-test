@@ -8,16 +8,18 @@ on:
         required: true
         default: 'stable'
 
+
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -31,13 +33,15 @@ jobs:
         run: |
           VERSION=$(node -p "require('./package.json').version")
           echo "Current Version: $VERSION"
-          echo "::set-output name=current_version::$VERSION"
+
+          echo "current_version=$VERSION" >> $GITHUB_OUTPUT
+          echo "current_alpha_branch=${VERSION}-alpha" >> $GITHUB_OUTPUT
 
       # Checkout or create version branch for alpha release
       - name: Checkout or create version branch for alpha release
         run: |
           VERSION="${{ steps.version.outputs.current_version }}"
-          ALPHA_BRANCH="${VERSION}-alpha"
+          ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
           
           if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
             # Fetch all branches
@@ -61,7 +65,7 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
           if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
-            git checkout "$ALPHA_BRANCH"
+            git checkout "${{ steps.version.outputs.current_alpha_branch }}"
             npx semantic-release --branches "alpha"
           else
             git checkout main
