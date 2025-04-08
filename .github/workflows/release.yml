@@ -16,15 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
       # Get the current version from package.json
       - name: Get current version from package.json
         id: version
@@ -42,34 +33,12 @@ jobs:
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
-          # Fetch all branches to ensure we're up-to-date with the remote
-          git fetch origin
 
           # Check if the alpha branch exists remotely, then checkout
           if git rev-parse --verify --quiet "$ALPHA_BRANCH"; then
             echo "Branch $ALPHA_BRANCH exists locally, checking it out."
             git checkout "$ALPHA_BRANCH"
-
-            # Check if the current branch is up-to-date with main
-            git fetch origin "${{ github.event.repository.default_branch }}"
-
-            if ! git merge-base --is-ancestor origin/main "$ALPHA_BRANCH"; then
-              echo "The branch $ALPHA_BRANCH is not up-to-date with main. Rebasing..."
-              # Stash any local changes
-              git stash
-
-              # Rebase with main
-              git rebase main -f
-
-              # Check if the rebase was successful
-              if [ $? -ne 0 ]; then
-                echo "Rebase failed. Please resolve conflicts and try again."
-                exit 1
-              fi
-              
-            else
-              echo "The branch $ALPHA_BRANCH is already up-to-date with main."
-            fi
+            git pull origin "${{ github.event.repository.default_branch }}"
           else  
             echo "Branch $ALPHA_BRANCH does not exist. Creating it from main."
             git checkout -b "$ALPHA_BRANCH" origin/main
@@ -77,6 +46,15 @@ jobs:
 
           # Push the branch to the remote
           git push origin "$ALPHA_BRANCH"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
 
       # Run Semantic Release
       - name: Run Semantic Release
