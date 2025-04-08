@@ -66,8 +66,8 @@ jobs:
         run: |
           if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
             git checkout "${{ steps.version.outputs.current_alpha_branch }}"
-            npx semantic-release --branches "alpha"
+            npx semantic-release
           else
             git checkout main
-            npx semantic-release --branches "main"
+            npx semantic-release
           fi
