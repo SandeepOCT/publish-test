@@ -1,0 +1,75 @@
+name: Semantic Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Release Type (stable or alpha)'
+        required: true
+        default: 'stable'
+  
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Get the current version from package.json
+      - name: Get current version from package.json
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Current Version: $VERSION"
+
+          echo "current_version=$VERSION" >> $GITHUB_OUTPUT
+          echo "current_alpha_branch=origin/${VERSION}-alpha" >> $GITHUB_OUTPUT
+
+      # Checkout or create version branch for alpha release
+      - name: Checkout or create version branch for alpha release
+        if: github.event.inputs.release_type == 'alpha'
+        run: |
+          VERSION="${{ steps.version.outputs.current_version }}"
+          ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
+
+          # pull the latest changes from the default branch
+          git pull
+
+          # Check if the alpha branch exists remotely, then checkout
+          if git rev-parse --verify --quiet "$ALPHA_BRANCH"; then
+            echo "Branch $ALPHA_BRANCH exists locally, checking it out."
+            git checkout "$ALPHA_BRANCH"
+            git pull --force --no-rebase origin "${{ github.event.repository.default_branch }}"
+          else  
+            echo "Branch $ALPHA_BRANCH does not exist. Creating it from main."
+            git checkout -b "$ALPHA_BRANCH" origin/main
+          fi
+
+          # Push the branch to the remote
+          git push origin "$ALPHA_BRANCH"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run Semantic Release
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
+            git checkout "${{ steps.version.outputs.current_alpha_branch }}"
+          else
+            git checkout origin/main
+          fi
+
+          npm run release
+
