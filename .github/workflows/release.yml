@@ -46,16 +46,10 @@ jobs:
           if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
             # Fetch all branches
             git fetch origin
-            
-            # Check if the alpha branch already exists, if not, create it
-            if git show-ref --verify --quiet "refs/heads/$ALPHA_BRANCH"; then
-              echo "Branch $ALPHA_BRANCH already exists, checking it out."
-              git checkout "$ALPHA_BRANCH"
-            else
-              echo "Branch $ALPHA_BRANCH doesn't exist, creating it."
-              git checkout -b "$ALPHA_BRANCH"
-              git push origin "$ALPHA_BRANCH"
-            fi
+            git checkout "$ALPHA_BRANCH" || git checkout -b "$ALPHA_BRANCH"
+            git rebase main -f
+            git push origin "$ALPHA_BRANCH" --force
+            echo "Alpha branch $ALPHA_BRANCH checked out and rebased with main."
           fi
 
       # Run Semantic Release
