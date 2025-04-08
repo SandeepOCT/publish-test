@@ -8,8 +8,6 @@ on:
         required: true
         default: 'stable'
 
-
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -39,27 +37,46 @@ jobs:
 
       # Checkout or create version branch for alpha release
       - name: Checkout or create version branch for alpha release
+        if: github.event.inputs.release_type == 'alpha'
         run: |
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
-          if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
-            # Fetch all branches
-            git fetch origin
+          # Fetch all branches to ensure we're up-to-date with the remote
+          git fetch origin
 
-            # Clean any unstaged changes (stash if necessary)
-            git reset --hard
+          # Check if the alpha branch exists remotely, then checkout
+          if git rev-parse --verify --quiet "$ALPHA_BRANCH"; then
+            echo "Branch $ALPHA_BRANCH exists locally, checking it out."
+            git checkout "$ALPHA_BRANCH"
 
-            # Checkout or create the alpha branch
-            git checkout "$ALPHA_BRANCH" || git checkout -b "$ALPHA_BRANCH"
-            
-            # Rebase with main
-            git rebase main -f
+            # Check if the current branch is up-to-date with main
+            git fetch origin "${{ github.event.repository.default_branch }}"
 
-            # Push the branch after rebase
-            git push origin "$ALPHA_BRANCH" --force
-            echo "Alpha branch $ALPHA_BRANCH checked out and rebased with main."
+            if ! git merge-base --is-ancestor origin/main "$ALPHA_BRANCH"; then
+              echo "The branch $ALPHA_BRANCH is not up-to-date with main. Rebasing..."
+              # Stash any local changes
+              git stash
+
+              # Rebase with main
+              git rebase main -f
+
+              # Check if the rebase was successful
+              if [ $? -ne 0 ]; then
+                echo "Rebase failed. Please resolve conflicts and try again."
+                exit 1
+              fi
+              
+            else
+              echo "The branch $ALPHA_BRANCH is already up-to-date with main."
+            fi
+          else  
+            echo "Branch $ALPHA_BRANCH does not exist. Creating it from main."
+            git checkout -b "$ALPHA_BRANCH" origin/main
           fi
+
+          # Push the branch to the remote
+          git push origin "$ALPHA_BRANCH"
 
       # Run Semantic Release
       - name: Run Semantic Release
