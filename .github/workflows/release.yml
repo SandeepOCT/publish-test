@@ -12,31 +12,58 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      # Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      - name: Set release type environment variable
-        run: echo "RELEASE_TYPE=${{ github.event.inputs.release_type }}" >> $GITHUB_ENV
+      # Get the current version from package.json
+      - name: Get current version from package.json
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "Current Version: $VERSION"
+          echo "::set-output name=current_version::$VERSION"
 
+      # Checkout or create version branch for alpha release
+      - name: Checkout or create version branch for alpha release
+        run: |
+          VERSION="${{ steps.version.outputs.current_version }}"
+          ALPHA_BRANCH="${VERSION}-alpha"
+          
+          if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
+            # Fetch all branches
+            git fetch origin
+            
+            # Check if the alpha branch already exists, if not, create it
+            if git show-ref --verify --quiet "refs/heads/$ALPHA_BRANCH"; then
+              echo "Branch $ALPHA_BRANCH already exists, checking it out."
+              git checkout "$ALPHA_BRANCH"
+            else
+              echo "Branch $ALPHA_BRANCH doesn't exist, creating it."
+              git checkout -b "$ALPHA_BRANCH"
+              git push origin "$ALPHA_BRANCH"
+            fi
+          fi
+
+      # Run Semantic Release
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
-          if [[ "$RELEASE_TYPE" == "alpha" ]]; then
-            # Trigger release from the alpha branch for a prerelease version
-            git checkout alpha
+          if [[ "${{ github.event.inputs.release_type }}" == "alpha" ]]; then
+            git checkout "$ALPHA_BRANCH"
             npx semantic-release --branches "alpha"
           else
-            # Trigger release from the main branch for a stable version
             git checkout main
             npx semantic-release --branches "main"
           fi
