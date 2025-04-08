@@ -1,0 +1,28 @@
+{
+  "name": "publish-test-12",
+  "version": "1.0.0",
+  "description": "publish test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandeepOCT/publish-test.git"
+  },
+  "keywords": [
+    "publish"
+  ],
+  "author": "SandeepOCT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandeepOCT/publish-test/issues"
+  },
+  "homepage": "https://github.com/SandeepOCT/publish-test#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.3"
+  },
+  "dependencies": {}
+}
