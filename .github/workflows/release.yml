@@ -34,6 +34,7 @@ jobs:
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
+          # pull the latest changes from the default branch
           git pull
 
           # Check if the alpha branch exists remotely, then checkout
@@ -71,4 +72,4 @@ jobs:
           fi
 
           npm run release
-          
+
