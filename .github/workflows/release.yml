@@ -7,6 +7,7 @@ on:
         description: 'Release Type (stable or alpha)'
         required: true
         default: 'stable'
+  
 
 jobs:
   release:
@@ -24,7 +25,7 @@ jobs:
           echo "Current Version: $VERSION"
 
           echo "current_version=$VERSION" >> $GITHUB_OUTPUT
-          echo "current_alpha_branch=${VERSION}-alpha" >> $GITHUB_OUTPUT
+          echo "current_alpha_branch=origin/${VERSION}-alpha" >> $GITHUB_OUTPUT
 
       # Checkout or create version branch for alpha release
       - name: Checkout or create version branch for alpha release
@@ -33,12 +34,13 @@ jobs:
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
+          git pull
 
           # Check if the alpha branch exists remotely, then checkout
           if git rev-parse --verify --quiet "$ALPHA_BRANCH"; then
             echo "Branch $ALPHA_BRANCH exists locally, checking it out."
             git checkout "$ALPHA_BRANCH"
-            git pull origin "${{ github.event.repository.default_branch }}"
+            git pull --force --no-rebase origin "${{ github.event.repository.default_branch }}"
           else  
             echo "Branch $ALPHA_BRANCH does not exist. Creating it from main."
             git checkout -b "$ALPHA_BRANCH" origin/main
