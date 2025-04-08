@@ -7,7 +7,6 @@ on:
         description: 'Release Type (stable or alpha)'
         required: true
         default: 'stable'
-  
 
 jobs:
   release:
