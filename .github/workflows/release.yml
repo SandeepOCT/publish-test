@@ -33,14 +33,47 @@ jobs:
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
-          # pull the latest changes from the default branch
-          git pull
+
+          echo "git branch"
+          git branch
+
+          echo "git tree"
+          git log --oneline --graph --decorate --all
+
+          # Fetch the latest changes from the default branch (main)
+          git pull >> /dev/null
+
+          echo "git branch"
+          git branch
+
+          echo "git tree"
+          git log --oneline --graph --decorate --all
 
           # Check if the alpha branch exists remotely, then checkout
-          if git rev-parse --verify --quiet "$ALPHA_BRANCH"; then
-            echo "Branch $ALPHA_BRANCH exists locally, checking it out."
+          if git rev-parse --verify --quiet "origin/$ALPHA_BRANCH" > /dev/null; then
+            echo "Branch $ALPHA_BRANCH exists locally"
             git checkout "$ALPHA_BRANCH"
-            git pull --force --no-rebase origin "${{ github.event.repository.default_branch }}"
+
+            echo "git branch"
+            git branch
+
+            echo "git tree"
+            git log --oneline --graph --decorate --all
+
+            echo "count"
+            git rev-list --left-right --count ${{ github.event.repository.default_branch }}...origin/${ALPHA_BRANCH}
+            echo "right only"
+            git rev-list --right-only ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}
+            echo "left only"
+            git rev-list --left-only ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}
+
+            echo "command ${{ github.event.repository.default_branch }} . $ALPHA_BRANCH"
+            if git rev-list --left-only --count ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}; then
+              echo "Branch $ALPHA_BRANCH is ahead of the default branch. Pulling the latest changes."
+              echo "base branch: ${{ github.event.repository.default_branch }}"
+              git merge --ff-only origin ${{ github.event.repository.default_branch }}
+            fi
+
           else  
             echo "Branch $ALPHA_BRANCH does not exist. Creating it from main."
             git checkout -b "$ALPHA_BRANCH" origin/main
