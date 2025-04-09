@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/SandeepOCT/publish-test/compare/v1.1.5...v1.1.6) (2025-04-09)
+
+
+### Bug Fixes
+
+* 🐛 automated github release with semantic release ([b98a85e](https://github.com/SandeepOCT/publish-test/commit/b98a85ec401a1b4f9e3e8c17ca61a145da6b1f04))
+
 ## [1.1.5](https://github.com/SandeepOCT/publish-test/compare/v1.1.4...v1.1.5) (2025-04-09)
 
 
