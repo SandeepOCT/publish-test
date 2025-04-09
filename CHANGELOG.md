@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/SandeepOCT/publish-test/compare/v1.1.1...v1.1.2) (2025-04-09)
+
+
+### Bug Fixes
+
+* empty bug test ([710422c](https://github.com/SandeepOCT/publish-test/commit/710422cb235cda4b42f47549ba91a5d15c486213))
+
 # 1.0.0 (2025-04-09)
 
 
