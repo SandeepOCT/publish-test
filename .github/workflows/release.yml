@@ -33,44 +33,19 @@ jobs:
           VERSION="${{ steps.version.outputs.current_version }}"
           ALPHA_BRANCH="${{ steps.version.outputs.current_alpha_branch }}"
 
-
-          echo "git branch"
-          git branch
-
-          echo "git tree"
-          git log --oneline --graph --decorate --all
-
           # Fetch the latest changes from the default branch (main)
           git pull >> /dev/null
-
-          echo "git branch"
-          git branch
-
-          echo "git tree"
-          git log --oneline --graph --decorate --all
 
           # Check if the alpha branch exists remotely, then checkout
           if git rev-parse --verify --quiet "origin/$ALPHA_BRANCH" > /dev/null; then
             echo "Branch $ALPHA_BRANCH exists locally"
             git checkout "$ALPHA_BRANCH"
 
-            echo "git branch"
-            git branch
+            # Check if alpha branch is behind main branch and merge if necessary
+            behind_commits=$(git rev-list --left-only --count ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH})
 
-            echo "git tree"
-            git log --oneline --graph --decorate --all
-
-            echo "count"
-            git rev-list --left-right --count ${{ github.event.repository.default_branch }}...origin/${ALPHA_BRANCH}
-            echo "right only"
-            git rev-list --right-only ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}
-            echo "left only"
-            git rev-list --left-only ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}
-
-            echo "command ${{ github.event.repository.default_branch }} . $ALPHA_BRANCH"
-            if git rev-list --left-only --count ${{ github.event.repository.default_branch }}...${ALPHA_BRANCH}; then
-              echo "Branch $ALPHA_BRANCH is ahead of the default branch. Pulling the latest changes."
-              echo "base branch: ${{ github.event.repository.default_branch }}"
+            if [ $behind_commits -gt 0 ]; then
+              echo "Branch $ALPHA_BRANCH is $behind_commits behind of the default branch. Pulling the latest changes."
               git merge --ff-only origin ${{ github.event.repository.default_branch }}
             fi
 
@@ -97,4 +72,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm run release
-
