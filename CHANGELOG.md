@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/SandeepOCT/publish-test/compare/v1.1.4...v1.1.5) (2025-04-09)
+
+
+### Bug Fixes
+
+* 🐛 fixed issue with release config ([e6e284e](https://github.com/SandeepOCT/publish-test/commit/e6e284e4e2d6505a7b6d867f8e5cbdb513194f9c))
+* issue with prerelease equal to alpha ([f819996](https://github.com/SandeepOCT/publish-test/commit/f819996fe443873735a5856851d5c993ea0f318d))
+
 ## [1.1.4](https://github.com/SandeepOCT/publish-test/compare/v1.1.3...v1.1.4) (2025-04-09)
 
 
