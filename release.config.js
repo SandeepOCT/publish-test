@@ -30,10 +30,5 @@ module.exports = {
       }
     ],
     "@semantic-release/github",
-    {
-      "assets": [
-        { "path": "index.js", "label": "JS distribution" }
-      ]
-    }
   ],
 };
