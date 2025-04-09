@@ -28,6 +28,12 @@ module.exports = {
         assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
         message: 'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
       }
-    ]
-  ]
+    ],
+    "@semantic-release/github",
+    {
+      "assets": [
+        { "path": "index.js", "label": "JS distribution" }
+      ]
+    }
+  ],
 };
