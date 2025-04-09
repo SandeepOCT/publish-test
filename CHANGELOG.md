@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/SandeepOCT/publish-test/compare/v1.1.6...v1.2.0) (2025-04-09)
+
+
+### Features
+
+* extra unwanted feature ([3de9892](https://github.com/SandeepOCT/publish-test/commit/3de9892d43194d100b4e5c14c6ec577da4af258b))
+
 ## [1.1.6](https://github.com/SandeepOCT/publish-test/compare/v1.1.5...v1.1.6) (2025-04-09)
 
 
