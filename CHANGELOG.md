@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/SandeepOCT/publish-test/compare/v1.2.0...v2.0.0) (2025-04-09)
+
+
+### Bug Fixes
+
+* 🐛 removed redundent  ([#2](https://github.com/SandeepOCT/publish-test/issues/2)) ([f72c52c](https://github.com/SandeepOCT/publish-test/commit/f72c52c7a4efed7353bed686d259c687a4a2bba2))
+
+
+### BREAKING CHANGES
+
+* might break
+
 # [1.2.0](https://github.com/SandeepOCT/publish-test/compare/v1.1.6...v1.2.0) (2025-04-09)
 
 
