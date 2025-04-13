@@ -14,16 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Get the current version from package.json
-      - name: Get current version from package.json
-        id: version
-        run: |
-          VERSION=$(node -p "require('./package.json').version")
-          echo "Current Version: $VERSION"
-
-          echo "current_version=$VERSION" >> $GITHUB_OUTPUT
-          echo "current_alpha_branch=${VERSION}-alpha" >> $GITHUB_OUTPUT
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -38,4 +28,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+          # Set the author name and email for the commit
+          GIT_AUTHOR_NAME: obertbot
+          GIT_AUTHOR_EMAIL: "<>"
+          GIT_COMMITTER_NAME: obertbot
+          GIT_COMMITTER_EMAIL: "<>"
+
         run: npm run release
