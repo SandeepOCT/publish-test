@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/SandeepOCT/publish-test/compare/v2.0.0...v2.1.0) (2025-04-13)
+
+
+### Features
+
+* ✨ alter github action name ([#3](https://github.com/SandeepOCT/publish-test/issues/3)) ([8558453](https://github.com/SandeepOCT/publish-test/commit/855845385e9e8fcbf7a6de97246592ae76dfefb1))
+
 # [2.0.0](https://github.com/SandeepOCT/publish-test/compare/v1.2.0...v2.0.0) (2025-04-09)
 
 
