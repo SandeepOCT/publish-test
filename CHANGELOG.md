@@ -1,3 +1,20 @@
+# [2.5.0](https://github.com/SandeepOCT/publish-test/compare/v2.4.0...v2.5.0) (2025-05-29)
+
+
+### Bug Fixes
+
+* resolve issue with feature ([389bdcf](https://github.com/SandeepOCT/publish-test/commit/389bdcf9b30ae6eaf0bbe146f7f5d09f1513cbe9))
+
+
+### Features
+
+* add new feature ([6067fef](https://github.com/SandeepOCT/publish-test/commit/6067fefbe1fccd623604a7eecf3cff2f225eadab))
+
+
+### Performance Improvements
+
+* enhance performance of feature ([a0b6b09](https://github.com/SandeepOCT/publish-test/commit/a0b6b0984e9f1e8fe88ac7d364b3c56f8dde104b))
+
 # [2.4.0](https://github.com/SandeepOCT/publish-test/compare/v2.3.0...v2.4.0) (2025-05-29)
 
 
