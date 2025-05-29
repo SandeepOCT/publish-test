@@ -4,8 +4,8 @@ module.exports = {
     [
       "@semantic-release/commit-analyzer",
       {
-        preset: 'conventionalcommits' // using the conventionalcommits preset, default is angular
-      }
+        preset: "conventionalcommits", // using the conventionalcommits preset, default is angular
+      },
     ],
     [
       '@semantic-release/changelog',
