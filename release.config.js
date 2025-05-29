@@ -24,6 +24,6 @@ module.exports = {
         message: 'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
       }
     ],
-    "@semantic-release/github",
+    "@semantic-release/github", // test github release
   ],
 };
