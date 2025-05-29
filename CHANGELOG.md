@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/SandeepOCT/publish-test/compare/v2.1.0...v2.2.0) (2025-05-29)
+
+
+### Features
+
+* changlog generator ([3df83fa](https://github.com/SandeepOCT/publish-test/commit/3df83fad83061bba752ac0bf1bc54b0e1e7cf3a0))
+
 # [2.1.0](https://github.com/SandeepOCT/publish-test/compare/v2.0.0...v2.1.0) (2025-04-13)
 
 
