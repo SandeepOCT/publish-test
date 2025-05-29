@@ -10,8 +10,8 @@ module.exports = {
     [
       "@semantic-release/changelog",
       {
-        changelogFile: 'CHANGELOG.md'
-      }
+        changelogFile: "CHANGELOG.md",
+      },
     ],
     '@semantic-release/release-notes-generator',
     '@semantic-release/npm',
