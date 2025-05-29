@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/SandeepOCT/publish-test/compare/v2.2.3...v2.3.0) (2025-05-29)
+
+
+### Features
+
+* ✨ test github release ([#6](https://github.com/SandeepOCT/publish-test/issues/6)) ([35d0f48](https://github.com/SandeepOCT/publish-test/commit/35d0f4851ee2f060555cfab15a053755b84cfaca))
+
 ## [2.2.3](https://github.com/SandeepOCT/publish-test/compare/v2.2.2...v2.2.3) (2025-05-29)
 
 
