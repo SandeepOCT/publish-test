@@ -13,8 +13,7 @@ module.exports = {
         changelogFile: "CHANGELOG.md",
       },
     ],
-    '@semantic-release/release-notes-generator',
-    '@semantic-release/npm',
+    "@semantic-release/release-notes-generator",
     [
       '@semantic-release/git',
       {
