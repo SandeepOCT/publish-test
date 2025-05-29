@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/SandeepOCT/publish-test/compare/v2.2.2...v2.2.3) (2025-05-29)
+
+
+### Bug Fixes
+
+* 🐛 remove other branches from release config ([#5](https://github.com/SandeepOCT/publish-test/issues/5)) ([22e2813](https://github.com/SandeepOCT/publish-test/commit/22e281300f8ebecfae9e62f6682e7fe7368a8afb))
+
 ## [2.2.2](https://github.com/SandeepOCT/publish-test/compare/v2.2.1...v2.2.2) (2025-05-29)
 
 
