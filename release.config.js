@@ -2,7 +2,7 @@ module.exports = {
   branches: ["main"],
   plugins: [
     [
-      '@semantic-release/commit-analyzer',
+      "@semantic-release/commit-analyzer",
       {
         preset: 'conventionalcommits' // using the conventionalcommits preset, default is angular
       }
