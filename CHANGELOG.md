@@ -1,3 +1,20 @@
+# [2.4.0](https://github.com/SandeepOCT/publish-test/compare/v2.3.0...v2.4.0) (2025-05-29)
+
+
+### Bug Fixes
+
+* 🐛 fix test ([759489c](https://github.com/SandeepOCT/publish-test/commit/759489c48fe32cd2227d0fbe7823688e0cdfdb94))
+
+
+### Features
+
+* ✨  feat test ([1835ab9](https://github.com/SandeepOCT/publish-test/commit/1835ab9e5609ba9e1f5b8719ff71d4887782e55a))
+
+
+### Performance Improvements
+
+* ⚡ perf test ([c3cabf4](https://github.com/SandeepOCT/publish-test/commit/c3cabf4e32a6af20eb3c3c781e5c6f69f227cfae))
+
 # [2.3.0](https://github.com/SandeepOCT/publish-test/compare/v2.2.3...v2.3.0) (2025-05-29)
 
 
