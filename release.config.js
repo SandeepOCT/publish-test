@@ -1,11 +1,6 @@
 module.exports = {
   branches: [
     'main',
-    {
-      name: '*-alpha',
-      // channel: 'alpha',
-      prerelease: true
-    },
   ],
   plugins: [
     [
