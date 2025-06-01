@@ -1,3 +1,11 @@
+## [2.11.1](https://github.com/SandeepOCT/publish-test/compare/v2.11.0...v2.11.1) (2025-06-01)
+
+### Bug Fixes
+
+* 🐛 try GH token as npm token ([e903730](https://github.com/SandeepOCT/publish-test/commit/e9037304983f9378dcd35dfe2cdb84212a245865))
+* 🐛 try remove NPM token ([b944aee](https://github.com/SandeepOCT/publish-test/commit/b944aee6c1beb0b61d516b43c85d487321519d34))
+* 🐛 try removing Github Token ([51c5300](https://github.com/SandeepOCT/publish-test/commit/51c5300291d26d21903367634c5e25f11c035421))
+
 ## [2.11.0](https://github.com/SandeepOCT/publish-test/compare/v2.10.0...v2.11.0) (2025-06-01)
 
 ### Features
