@@ -1,3 +1,9 @@
+## [2.11.0](https://github.com/SandeepOCT/publish-test/compare/v2.10.0...v2.11.0) (2025-06-01)
+
+### Features
+
+* add new feature ([3d53be9](https://github.com/SandeepOCT/publish-test/commit/3d53be95a6db5459928dd42525b758a596b2cf57))
+
 ## [2.10.0](https://github.com/SandeepOCT/publish-test/compare/v2.9.1...v2.10.0) (2025-06-01)
 
 ### Features
