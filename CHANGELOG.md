@@ -1,3 +1,13 @@
+## [2.9.0](https://github.com/SandeepOCT/publish-test/compare/v2.8.0...v2.9.0) (2025-06-01)
+
+### Bug Fixes
+
+* resolve issue with feature ([ed92a01](https://github.com/SandeepOCT/publish-test/commit/ed92a01baacf063d50718b08ad0f019043464d8f))
+
+### Features
+
+* ✨ tinkering order ([4808ab7](https://github.com/SandeepOCT/publish-test/commit/4808ab70dea58c4bf791ca9222fef574da8283fa))
+
 ## [2.8.0](https://github.com/SandeepOCT/publish-test/compare/v2.7.2...v2.8.0) (2025-06-01)
 
 ### Features
