@@ -1,3 +1,17 @@
+## [2.8.0](https://github.com/SandeepOCT/publish-test/compare/v2.7.2...v2.8.0) (2025-06-01)
+
+### Features
+
+* ✨ uncover ([7b4a042](https://github.com/SandeepOCT/publish-test/commit/7b4a042849e307a8e90b157864d929a4833356c1))
+
+### Bug Fixes
+
+* resolve issue with feature ([816af1b](https://github.com/SandeepOCT/publish-test/commit/816af1b55391b0f7749a82fd9a06c2b5259ac251))
+
+### Other Changes
+
+* configure CI pipeline ([28ac0f9](https://github.com/SandeepOCT/publish-test/commit/28ac0f9ab2b0e1f5409853a6f2ed1bcb484864e7))
+
 ## [2.7.2](https://github.com/SandeepOCT/publish-test/compare/v2.7.1...v2.7.2) (2025-06-01)
 
 ## [2.7.1](https://github.com/SandeepOCT/publish-test/compare/v2.7.0...v2.7.1) (2025-06-01)
