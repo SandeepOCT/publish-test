@@ -1,3 +1,13 @@
+## [2.7.1](https://github.com/SandeepOCT/publish-test/compare/v2.7.0...v2.7.1) (2025-06-01)
+
+### Bug Fixes
+
+* resolve issue with feature ([b720a67](https://github.com/SandeepOCT/publish-test/commit/b720a67dfb6ea7678575432975a7ab887a87358b))
+
+### Other Changes
+
+* configure CI pipeline ([fe5f6dd](https://github.com/SandeepOCT/publish-test/commit/fe5f6dd4022cd6679b0385f1a6a3981dce8f2b4a))
+
 ## [2.7.0](https://github.com/SandeepOCT/publish-test/compare/v2.6.0...v2.7.0) (2025-06-01)
 
 ### Features
