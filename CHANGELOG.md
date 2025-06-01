@@ -1,3 +1,26 @@
+## [2.10.0](https://github.com/SandeepOCT/publish-test/compare/v2.9.1...v2.10.0) (2025-06-01)
+
+### Features
+
+* add new feature ([47a76dc](https://github.com/SandeepOCT/publish-test/commit/47a76dc03b71f2d6ab8742d2e91c22f7e366a9fd))
+
+### Bug Fixes
+
+* resolve issue with feature ([1011297](https://github.com/SandeepOCT/publish-test/commit/101129793a5b8d0c38ec6200cfc1ada7ead5ba15))
+
+### Other Changes
+
+* apply consistent styling ([f6447f6](https://github.com/SandeepOCT/publish-test/commit/f6447f60213e8954afc3bb8ef39205b3e9a48d8a))
+* enhance performance of feature ([e7a0278](https://github.com/SandeepOCT/publish-test/commit/e7a02785a7a853a75e3ccf9643016df968cb5dc1))
+* improve documentation ([e48f01e](https://github.com/SandeepOCT/publish-test/commit/e48f01eb64d23cda31e6072928cea6595120bc2d))
+* optimize code structure ([453fc49](https://github.com/SandeepOCT/publish-test/commit/453fc49cd5fe4f34a86cafc4e5df9eab90ae5ce6))
+* update dependencies ([13e3254](https://github.com/SandeepOCT/publish-test/commit/13e325479ce48cb11c806706d073af2b79872936))
+* update project configuration ([5a7beb7](https://github.com/SandeepOCT/publish-test/commit/5a7beb7264200f9e7a70a16f3755b50b9d985629))
+
+### CI
+
+* configure CI pipeline ([8f4569f](https://github.com/SandeepOCT/publish-test/commit/8f4569f54abdc63c59fdcf79dbcb7329fe7629ca))
+
 ## [2.9.1](https://github.com/SandeepOCT/publish-test/compare/v2.9.0...v2.9.1) (2025-06-01)
 
 ### Other Changes
