@@ -1,3 +1,29 @@
+const releaseRules = [
+  { type: "build", release: "patch" },
+  { type: "chore", release: "patch" },
+  { type: "perf", release: "patch" },
+  { type: "refactor", release: "patch" },
+  { type: "style", release: "patch" },
+];
+
+const releseNotesTypes = [
+  // { type: "feat", section: "Features" },
+  // { type: "fix", section: "Bug Fixes" },
+  { type: "build", section: "Other Changes", hidden: false },
+  { type: "ci", section: "Other Changes", hidden: false },
+  { type: "chore", section: "Other Changes", hidden: false },
+  { type: "docs", section: "Other Changes", hidden: false },
+  { type: "perf", section: "Other Changes" },
+  { type: "refactor", section: "Other Changes", hidden: false },
+  { type: "style", section: "Other Changes", hidden: false },
+];
+
+const assets = [
+  "CHANGELOG.md",
+  "package.json",
+  "package-lock.json",
+];
+
 module.exports = {
   branches: ["main"],
   plugins: [
@@ -5,20 +31,7 @@ module.exports = {
       "@semantic-release/commit-analyzer",
       {
         preset: "conventionalcommits", // using the conventionalcommits preset, default is angular
-        presetConfig: {
-          types: [
-            { type: "feat", section: "Features" },
-            { type: "fix", section: "Bug Fixes" },
-            { type: "build", section: "Dependencies", hidden: false },
-            { type: "chore", section: "Other Changes", hidden: false },
-            { type: "docs", section: "Documentation", hidden: false },
-            { type: "style", section: "Styles", hidden: false },
-            { type: "refactor", section: "Other Changes", hidden: false },
-            { type: "perf", section: "Performance Improvements" },
-            { type: "test", hidden: true },
-            { type: "ci", section: "Other Changes", hidden: false },
-          ],
-        },
+        releaseRules,
       },
     ],
     [
@@ -32,18 +45,7 @@ module.exports = {
       {
         preset: "conventionalcommits",
         presetConfig: {
-          types: [
-            { type: "feat", section: "Features" },
-            { type: "fix", section: "Bug Fixes" },
-            { type: "build", section: "Dependencies", hidden: false },
-            { type: "chore", section: "Other Changes", hidden: false },
-            { type: "docs", section: "Documentation", hidden: false },
-            { type: "style", section: "Styles", hidden: false },
-            { type: "refactor", section: "Other Changes", hidden: false },
-            { type: "perf", section: "Performance Improvements" },
-            { type: "test", hidden: true },
-            { type: "ci", section: "Other Changes", hidden: false },
-          ],
+          types: releseNotesTypes,
         },
       },
     ],
@@ -51,7 +53,7 @@ module.exports = {
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md", "package.json", "package-lock.json"],
+        assets,
         message:
           "chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
