@@ -1,3 +1,17 @@
+## [2.9.1](https://github.com/SandeepOCT/publish-test/compare/v2.9.0...v2.9.1) (2025-06-01)
+
+### Other Changes
+
+* update dependencies ([20acc42](https://github.com/SandeepOCT/publish-test/commit/20acc42f6f5ee5f4522c5e6631bbca08d62ac0ec))
+* update dependencies21 ([ecd113d](https://github.com/SandeepOCT/publish-test/commit/ecd113d3144e925afddf036b18c5534df874c859))
+* update dependencies2222 ([3000be5](https://github.com/SandeepOCT/publish-test/commit/3000be57ad2ee63a58e216ca50ce9ce6a7b7e608))
+* update docs ([9767caf](https://github.com/SandeepOCT/publish-test/commit/9767cafb07431c9de7847e1ac737b8b37e05616d))
+* update project configuration ([484d2b6](https://github.com/SandeepOCT/publish-test/commit/484d2b69ff0a871681bddd2864f32dfda6e7f39b))
+
+### CI
+
+* configure CI pipeline ([b95272f](https://github.com/SandeepOCT/publish-test/commit/b95272f0e6adbe70fbb3cea5b960c927b4f595d0))
+
 ## [2.9.0](https://github.com/SandeepOCT/publish-test/compare/v2.8.0...v2.9.0) (2025-06-01)
 
 ### Bug Fixes
