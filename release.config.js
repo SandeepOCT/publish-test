@@ -7,15 +7,15 @@ const releaseRules = [
 ];
 
 const releseNotesTypes = [
-  { type: "fix", section: "Bug Fixes" },
   { type: "feat", section: "Features" },
+  { type: "fix", section: "Bug Fixes" },
   { type: "build", section: "Other Changes", hidden: false },
-  { type: "ci", section: "Other Changes", hidden: false },
   { type: "chore", section: "Other Changes", hidden: false },
   { type: "docs", section: "Other Changes", hidden: false },
   { type: "perf", section: "Other Changes" },
   { type: "refactor", section: "Other Changes", hidden: false },
   { type: "style", section: "Other Changes", hidden: false },
+  { type: "ci", section: "CI", hidden: false },
 ];
 
 const assets = [
