@@ -7,8 +7,8 @@ const releaseRules = [
 ];
 
 const releseNotesTypes = [
-  // { type: "feat", section: "Features" },
-  // { type: "fix", section: "Bug Fixes" },
+  { type: "feat", section: "Features" },
+  { type: "fix", section: "Bug Fixes" },
   { type: "build", section: "Other Changes", hidden: false },
   { type: "ci", section: "Other Changes", hidden: false },
   { type: "chore", section: "Other Changes", hidden: false },
