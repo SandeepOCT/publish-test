@@ -31,4 +31,3 @@ jobs:
           generateReleaseNotes: true
           tag: ${{ steps.semver.outputs.next }}
           token: ${{ github.token }}
-          bodyFile: ".github/release-notes.md"
