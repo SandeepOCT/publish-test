@@ -1,0 +1,33 @@
+name: "Release Notes Generation"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate_release_notes:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.ref == 'refs/heads/main' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get Next Version
+        id: semver
+        uses: ietf-tools/semver-action@v1
+        with:
+          token: ${{ github.token }}
+          branch: "main"
+          noVersionBumpBehavior: patch
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          allowUpdates: false
+          draft: true
+          prerelease: false
+          generateReleaseNotes: true
+          tag: ${{ steps.semver.outputs.next }}
+          token: ${{ github.token }}
