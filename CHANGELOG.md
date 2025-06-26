@@ -1,3 +1,9 @@
+## [2.12.6](https://github.com/SandeepOCT/publish-test/compare/v2.12.5...v2.12.6) (2025-06-26)
+
+### Bug Fixes
+
+* tinkerig ([6553509](https://github.com/SandeepOCT/publish-test/commit/65535094f681f404baa06d9971175b7bbd5b519e))
+
 ## [2.12.5](https://github.com/SandeepOCT/publish-test/compare/v2.12.4...v2.12.5) (2025-06-26)
 
 ### Bug Fixes
