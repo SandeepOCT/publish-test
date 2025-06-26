@@ -1,3 +1,9 @@
+## [2.12.5](https://github.com/SandeepOCT/publish-test/compare/v2.12.4...v2.12.5) (2025-06-26)
+
+### Bug Fixes
+
+* test ([de7f360](https://github.com/SandeepOCT/publish-test/commit/de7f360e92e66c17b9cacbaa87da0fc241b50e02))
+
 ## [2.12.4](https://github.com/SandeepOCT/publish-test/compare/v2.12.3...v2.12.4) (2025-06-26)
 
 ### Bug Fixes
