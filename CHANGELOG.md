@@ -1,3 +1,9 @@
+## [2.12.11](https://github.com/SandeepOCT/publish-test/compare/v2.12.10...v2.12.11) (2025-06-26)
+
+### Bug Fixes
+
+* try permissions ([608ead5](https://github.com/SandeepOCT/publish-test/commit/608ead5c0cc0f325079a6d8866745e0eaa3ae7f5))
+
 ## [2.12.10](https://github.com/SandeepOCT/publish-test/compare/v2.12.9...v2.12.10) (2025-06-26)
 
 ### Bug Fixes
