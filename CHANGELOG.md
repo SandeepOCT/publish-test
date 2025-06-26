@@ -1,3 +1,9 @@
+## [2.12.8](https://github.com/SandeepOCT/publish-test/compare/v2.12.7...v2.12.8) (2025-06-26)
+
+### Bug Fixes
+
+* tried ([1ea2624](https://github.com/SandeepOCT/publish-test/commit/1ea262473d8463e66ab46b5d2d6f562caf97b14d))
+
 ## [2.12.7](https://github.com/SandeepOCT/publish-test/compare/v2.12.6...v2.12.7) (2025-06-26)
 
 ### Bug Fixes
