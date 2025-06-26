@@ -45,9 +45,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Set the author name and email for the commit
 
-          GIT_AUTHOR_NAME: "github-actions[bot]"
-          GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
-          GIT_COMMITTER_NAME: "github-actions[bot]"
-          GIT_COMMITTER_EMAIL: "github-actions[bot]@users.noreply.github.com"
+          GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
+          GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
+          GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
+          GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
 
         run: npm run release
