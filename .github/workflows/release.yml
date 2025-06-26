@@ -27,7 +27,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "${{ env.USER_NAME }}"
+          git config user.name "${{ env.USER_NAME }}123"
           git config user.email "${{ env.USER_EMAIL }}"
 
       - name: Setup .npmrc
