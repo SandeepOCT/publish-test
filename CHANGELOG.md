@@ -1,3 +1,9 @@
+## [2.12.4](https://github.com/SandeepOCT/publish-test/compare/v2.12.3...v2.12.4) (2025-06-26)
+
+### Bug Fixes
+
+* 🐛 setup user values ([b126d95](https://github.com/SandeepOCT/publish-test/commit/b126d95dd575cef04410ef454101103dab7f5f08))
+
 ## [2.12.3](https://github.com/SandeepOCT/publish-test/compare/v2.12.2...v2.12.3) (2025-06-26)
 
 ### Bug Fixes
