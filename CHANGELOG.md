@@ -1,3 +1,9 @@
+## [2.12.3](https://github.com/SandeepOCT/publish-test/compare/v2.12.2...v2.12.3) (2025-06-26)
+
+### Bug Fixes
+
+* tempalte ([b57a845](https://github.com/SandeepOCT/publish-test/commit/b57a84535ca7152be9c227674e9abdbb49982827))
+
 ## [2.12.2](https://github.com/SandeepOCT/publish-test/compare/v2.12.1...v2.12.2) (2025-06-26)
 
 ### Bug Fixes
