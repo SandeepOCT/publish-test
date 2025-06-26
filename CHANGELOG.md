@@ -1,3 +1,11 @@
+## [2.12.2](https://github.com/SandeepOCT/publish-test/compare/v2.12.1...v2.12.2) (2025-06-26)
+
+### Bug Fixes
+
+* 🐛 configure git ([8141c2a](https://github.com/SandeepOCT/publish-test/commit/8141c2a963b16c13120ff6a61c18a51a5304cf00))
+* 🐛 specify tokens ([53682ad](https://github.com/SandeepOCT/publish-test/commit/53682aded26a5a7cdacdce396640ddf2f68b91c3))
+* 🐛 temp ([922fed2](https://github.com/SandeepOCT/publish-test/commit/922fed297291afce46a161435a842f5681100e4b))
+
 ## [2.11.1](https://github.com/SandeepOCT/publish-test/compare/v2.11.0...v2.11.1) (2025-06-01)
 
 ### Bug Fixes
