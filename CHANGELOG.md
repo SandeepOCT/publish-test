@@ -1,3 +1,9 @@
+## [2.12.10](https://github.com/SandeepOCT/publish-test/compare/v2.12.9...v2.12.10) (2025-06-26)
+
+### Bug Fixes
+
+* try tinkering 2 ([1a126a9](https://github.com/SandeepOCT/publish-test/commit/1a126a967594b3eefe1fa412620b1460bcba5066))
+
 ## [2.12.9](https://github.com/SandeepOCT/publish-test/compare/v2.12.8...v2.12.9) (2025-06-26)
 
 ### Bug Fixes
