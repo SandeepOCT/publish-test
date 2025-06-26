@@ -1,5 +1,11 @@
 name: Semantic Release
 
+permissions:
+  contents: write
+  packages: write
+  checks: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
   # push:
@@ -45,9 +51,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Set the author name and email for the commit
 
-          GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
-          GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
-          GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
-          GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
+          # GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
+          # GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
+          # GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
+          # GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
 
         run: npm run release
