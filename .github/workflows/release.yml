@@ -37,9 +37,9 @@ jobs:
 
       # Run Semantic Release
       - name: Run Semantic Release
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Set the author name and email for the commit
           # GIT_AUTHOR_NAME: obertbot
           # GIT_AUTHOR_EMAIL: "<>"
