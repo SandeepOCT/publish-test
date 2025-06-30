@@ -1,6 +1,6 @@
 {
   "name": "@SandeepOCT/publish-test",
-  "version": "2.12.16",
+  "version": "2.12.17",
   "description": "publish test",
   "main": "index.js",
   "scripts": {

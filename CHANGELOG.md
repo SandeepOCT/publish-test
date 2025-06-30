@@ -1,3 +1,9 @@
+## [2.12.17](https://github.com/SandeepOCT/publish-test/compare/v2.12.16...v2.12.17) (2025-06-30)
+
+### Bug Fixes
+
+* remove commiter name ([2324033](https://github.com/SandeepOCT/publish-test/commit/23240334f085a8979d09b8df90f6c3f5de9cabce))
+
 ## [2.12.16](https://github.com/SandeepOCT/publish-test/compare/v2.12.15...v2.12.16) (2025-06-30)
 
 ### Bug Fixes
