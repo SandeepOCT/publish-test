@@ -27,7 +27,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "${{ env.USER_NAME }}123"
+          git config user.name "${{ env.USER_NAME }}"
           git config user.email "${{ env.USER_EMAIL }}"
 
       - name: Setup .npmrc
@@ -48,5 +48,7 @@ jobs:
           # GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
           # GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
           # GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
+
+          # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         run: npm run release
