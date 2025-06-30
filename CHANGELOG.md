@@ -1,3 +1,9 @@
+## [2.12.14](https://github.com/SandeepOCT/publish-test/compare/v2.12.13...v2.12.14) (2025-06-30)
+
+### Bug Fixes
+
+* try remove npm token ([19de405](https://github.com/SandeepOCT/publish-test/commit/19de405339fac169ce4bcc82689f223c33aa7590))
+
 ## [2.12.13](https://github.com/SandeepOCT/publish-test/compare/v2.12.12...v2.12.13) (2025-06-30)
 
 ### Bug Fixes
