@@ -1,3 +1,10 @@
+## [2.12.12](https://github.com/SandeepOCT/publish-test/compare/v2.12.11...v2.12.12) (2025-06-30)
+
+### Bug Fixes
+
+* commenting commenter email ([9967253](https://github.com/SandeepOCT/publish-test/commit/9967253e088ca85a54a76bdcfb9aa818ead33891))
+* Update env vars in release workflow ([ac91473](https://github.com/SandeepOCT/publish-test/commit/ac91473d81bdd660309f092332db2bfe46c439c5))
+
 ## [2.12.11](https://github.com/SandeepOCT/publish-test/compare/v2.12.10...v2.12.11) (2025-06-26)
 
 ### Bug Fixes
