@@ -1,3 +1,9 @@
+## [2.12.16](https://github.com/SandeepOCT/publish-test/compare/v2.12.15...v2.12.16) (2025-06-30)
+
+### Bug Fixes
+
+* remove commiter email ([568e132](https://github.com/SandeepOCT/publish-test/commit/568e1324c89368c6dbdbd6bf12ef2bc24ad70165))
+
 ## [2.12.15](https://github.com/SandeepOCT/publish-test/compare/v2.12.14...v2.12.15) (2025-06-30)
 
 ### Bug Fixes
