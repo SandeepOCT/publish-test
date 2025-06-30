@@ -1,3 +1,9 @@
+## [2.12.13](https://github.com/SandeepOCT/publish-test/compare/v2.12.12...v2.12.13) (2025-06-30)
+
+### Bug Fixes
+
+* remove all git names ([a864cad](https://github.com/SandeepOCT/publish-test/commit/a864cad2e8577ebe67dbcd0caffd92c5891a3faa))
+
 ## [2.12.12](https://github.com/SandeepOCT/publish-test/compare/v2.12.11...v2.12.12) (2025-06-30)
 
 ### Bug Fixes
