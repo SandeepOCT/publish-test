@@ -1,3 +1,9 @@
+## [2.12.15](https://github.com/SandeepOCT/publish-test/compare/v2.12.14...v2.12.15) (2025-06-30)
+
+### Bug Fixes
+
+* Update release workflow Git config and comments ([deeb9e2](https://github.com/SandeepOCT/publish-test/commit/deeb9e2159429f07361201bf5c6136afb7cb4721))
+
 ## [2.12.14](https://github.com/SandeepOCT/publish-test/compare/v2.12.13...v2.12.14) (2025-06-30)
 
 ### Bug Fixes
