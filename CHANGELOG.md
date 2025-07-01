@@ -1,3 +1,9 @@
+## [2.12.18](https://github.com/SandeepOCT/publish-test/compare/v2.12.17...v2.12.18) (2025-07-01)
+
+### Bug Fixes
+
+* try suggestion ([9ea3847](https://github.com/SandeepOCT/publish-test/commit/9ea384780f605ee6f28cfe991012914e10593d1d))
+
 ## [2.12.17](https://github.com/SandeepOCT/publish-test/compare/v2.12.16...v2.12.17) (2025-06-30)
 
 ### Bug Fixes
