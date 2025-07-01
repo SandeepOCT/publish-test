@@ -25,10 +25,19 @@ jobs:
           cache: 'npm'
           node-version: '20'
 
+      # - name: Configure Git
+      #   run: |
+      #     git config user.name "${{ env.USER_NAME }}"
+      #     git config user.email "${{ env.USER_EMAIL }}"
+
       - name: Configure Git
         run: |
-          git config user.name "${{ env.USER_NAME }}"
-          git config user.email "${{ env.USER_EMAIL }}"
+          git config user.name ${{ env.GIT_AUTHOR_NAME }}
+          git config user.email ${{ env.GIT_AUTHOR_EMAIL }}
+        env:
+          GIT_AUTHOR_NAME: "github-actions[bot]"
+          GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
+
 
       - name: Setup .npmrc
         run: |
@@ -38,17 +47,24 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Run Semantic Release
-      - name: Run Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Set the author name and email for the commit
+      # # Run Semantic Release
+      # - name: Run Semantic Release
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     # Set the author name and email for the commit
 
-          GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
-          GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
-          # GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
-          # GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
+      #     GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
+      #     GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
+      #     # GIT_COMMITTER_NAME: ${{ env.USER_NAME }}
+      #     # GIT_COMMITTER_EMAIL: ${{ env.USER_EMAIL }}
 
-          # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     # NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      #   run: npm run release
+
+      - name: Release
         run: npm run release
+        env:
+          # Used for publishing to package and Github release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
