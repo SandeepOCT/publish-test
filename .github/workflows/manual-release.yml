@@ -1,0 +1,29 @@
+name: release-notes.yml
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get Next Version
+        id: semver
+        uses: ietf-tools/semver-action@v1
+        with:
+          token: ${{ github.token }}
+          branch: "main"
+          noVersionBumpBehavior: patch
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          allowUpdates: true
+          draft: true
+          prerelease: true
+          generateReleaseNotes: true
+          tag: ${{ steps.semver.outputs.next }}
+          token: ${{ github.token }}
