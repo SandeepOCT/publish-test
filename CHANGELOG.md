@@ -4,6 +4,20 @@ it will contain logs
 
 
 
+## [2.13.0](https://github.com/SandeepOCT/publish-test/compare/v2.12.19...v2.13.0) (2025-08-13)
+
+
+### Features
+
+* Create release-please.yml ([285d55e](https://github.com/SandeepOCT/publish-test/commit/285d55e18622d3c6551ae9c9236629b441299ac1))
+
+
+### Bug Fixes
+
+* :bug bug ([2b969aa](https://github.com/SandeepOCT/publish-test/commit/2b969aa81b6be57f3eead5bee6aad4919c24c9ca))
+* Change type of releaseUpdate release-please.yml ([e8e117e](https://github.com/SandeepOCT/publish-test/commit/e8e117e3a74b8cfbba87bfd451e789595d237bac))
+* Update CHANGELOG.md ([41c2026](https://github.com/SandeepOCT/publish-test/commit/41c2026f3fd253ffb62663f6b90d46c74ad6b44c))
+
 ## [2.12.18](https://github.com/SandeepOCT/publish-test/compare/v2.12.17...v2.12.18) (2025-07-01)
 
 ### Bug Fixes
