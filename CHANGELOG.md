@@ -4,6 +4,19 @@
 
 * try suggestion ([9ea3847](https://github.com/SandeepOCT/publish-test/commit/9ea384780f605ee6f28cfe991012914e10593d1d))
 
+## [2.13.0](https://github.com/SandeepOCT/publish-test/compare/v2.12.19...v2.13.0) (2025-08-13)
+
+
+### Features
+
+* Create release-please.yml ([285d55e](https://github.com/SandeepOCT/publish-test/commit/285d55e18622d3c6551ae9c9236629b441299ac1))
+
+
+### Bug Fixes
+
+* :bug bug ([2b969aa](https://github.com/SandeepOCT/publish-test/commit/2b969aa81b6be57f3eead5bee6aad4919c24c9ca))
+* Change type of releaseUpdate release-please.yml ([e8e117e](https://github.com/SandeepOCT/publish-test/commit/e8e117e3a74b8cfbba87bfd451e789595d237bac))
+
 ## [2.12.17](https://github.com/SandeepOCT/publish-test/compare/v2.12.16...v2.12.17) (2025-06-30)
 
 ### Bug Fixes
