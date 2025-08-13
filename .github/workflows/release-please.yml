@@ -35,7 +35,7 @@ jobs:
           # name of the distributions releases are being created for, e.g., "name" in package.json, or "setup.py"
           # package-name: # optional
           # what type of release is this, one of (ruby, python, node, terraform-module)
-          release-type: simple
+          release-type: node
           # should breaking changes before 1.0.0 produce minor bumps
           # bump-minor-pre-major: # optional
           # should feat changes before 1.0.0 produce patch bumps instead of minor bumps
