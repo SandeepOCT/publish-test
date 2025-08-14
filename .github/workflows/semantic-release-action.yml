@@ -54,7 +54,7 @@ jobs:
           # branch: # optional
 
            additional-packages: |
-             ['conventional-changelog-conventionalcommits@7']
+             ['conventional-changelog-conventionalcommits@6']
            plugins: |
              [
                [
