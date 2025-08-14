@@ -56,15 +56,15 @@ module.exports = {
     // ],
     // This plugin is responsible for publishing the package to npm.
     '@semantic-release/npm',
-    [
-      // This plugin is responsible for committing the changes made by the previous plugins.
-      '@semantic-release/git',
-      {
-        assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
-        message:
-          'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-      },
-    ],
+    // [
+    //   // This plugin is responsible for committing the changes made by the previous plugins.
+    //   '@semantic-release/git',
+    //   {
+    //     assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
+    //     message:
+    //       'chore(release): :rocket: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+    //   },
+    // ],
     // This plugin is resposible for creating Github releases and update included PR's with the release information.
     '@semantic-release/github',
   ],
