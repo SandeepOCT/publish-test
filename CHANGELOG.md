@@ -1,3 +1,10 @@
+## [2.17.1](https://github.com/SandeepOCT/publish-test/compare/v2.17.0...v2.17.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* **semrel:** bugggy ([c71eb39](https://github.com/SandeepOCT/publish-test/commit/c71eb39352ea3e6793ff58de0ead7b49ae0242f0))
+
 ## [2.17.0](https://github.com/SandeepOCT/publish-test/compare/v2.16.0...v2.17.0) (2025-08-14)
 
 
