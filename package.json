@@ -19,8 +19,7 @@
     "url": "https://github.com/SandeepOCT/publish-test/issues"
   },
   "homepage": "https://github.com/SandeepOCT/publish-test#readme",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

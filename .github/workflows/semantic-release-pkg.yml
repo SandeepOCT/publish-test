@@ -2,15 +2,23 @@ name: Semantic Release pkg
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
 env:
   USER_NAME: github-actions[bot]
   USER_EMAIL: github-actions[bot]@users.noreply.github.com
 jobs:
   release:
+    env:
+      # This is used to set the author and committer information for semantic release commits
+      # If environment variables are not set, committer will be in the name of Semantic Release Bot instead of the GitHub Actions bot
+      GIT_AUTHOR_NAME: "obertbot"
+      GIT_AUTHOR_EMAIL: "obertbot@octanner.com"
+      GIT_COMMITTER_NAME: "obertbot"
+      GIT_COMMITTER_EMAIL: "obertbot@octanner.com"
+
     runs-on: ubuntu-latest
     steps:
       # Checkout the repository
@@ -81,6 +89,3 @@ jobs:
         env:
           # Used for publishing to package and Github release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          GIT_AUTHOR_NAME: ${{ env.USER_NAME }}
-          GIT_AUTHOR_EMAIL: ${{ env.USER_EMAIL }}
