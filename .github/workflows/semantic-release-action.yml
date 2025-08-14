@@ -34,8 +34,9 @@ jobs:
           #   ['@semantic-release/changelog@6.0.0'
           #   @semantic-release/git
           # Define a list of additional plugins or shareable configurations (official or community) to install. Use this if you 1) use any plugins other than commit-analyzer, release-notes-generator, github, or npm, which are already installed along with semantic-release or 2) want to extend from a shareable configuration. https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
-          additional_packages: |
-            ["@semantic-release/commit-analyzer"]
+          # additional_packages: |
+          #   ["@semantic-release/commit-analyzer"]
+          additional_packages: conventional-changelog-conventionalcommits
           # The objective of the dry-run mode is to get a preview of the pending release. Dry-run mode skips the following steps: prepare, publish, success and fail. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#dryrun
           # dry_run: # optional
           # The git repository URL. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#repositoryurl
