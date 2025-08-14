@@ -4,6 +4,13 @@ it will contain logs
 
 
 
+### [2.13.1](https://github.com/SandeepOCT/publish-test/compare/v2.13.0...v2.13.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* release Create semantic-release.yml ([ef3ff8d](https://github.com/SandeepOCT/publish-test/commit/ef3ff8de5794febf3e82700838ba11406d6d223b))
+
 ## [2.13.0](https://github.com/SandeepOCT/publish-test/compare/v2.12.19...v2.13.0) (2025-08-13)
 
 
