@@ -36,12 +36,9 @@ jobs:
           # extends: # optional
           # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
           additional-packages: |
-            @semantic-release/changelog@6.0.0
-            @semantic-release/git
-            conventional-changelog-conventionalcommits@7
+            ['@semantic-release/changelog@6.0.0', '@semantic-release/git', 'conventional-changelog-conventionalcommits@7']
           plugins: |
-            @semantic-release/changelog@6.0.0
-            @semantic-release/git
+            ['@semantic-release/changelog@6.0.0', '@semantic-release/git']
           # conventional-changelog-conventionalcommits@7
           # Define a list of additional plugins or shareable configurations (official or community) to install. Use this if you 1) use any plugins other than commit-analyzer, release-notes-generator, github, or npm, which are already installed along with semantic-release or 2) want to extend from a shareable configuration. https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
           # additional_packages: |
