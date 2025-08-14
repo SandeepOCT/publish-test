@@ -1,3 +1,10 @@
+## [2.17.2](https://github.com/SandeepOCT/publish-test/compare/v2.17.1...v2.17.2) (2025-08-14)
+
+
+### Bug Fixes
+
+* **naming:** 🐛 followed naming structure ([98246fe](https://github.com/SandeepOCT/publish-test/commit/98246fef13ed7699b0e506e921f90d927ad25863))
+
 ## [2.17.1](https://github.com/SandeepOCT/publish-test/compare/v2.17.0...v2.17.1) (2025-08-14)
 
 
