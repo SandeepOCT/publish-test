@@ -35,8 +35,8 @@ jobs:
           # List of modules or file paths containing . https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#extends
           # extends: # optional
           # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
-          additional-packages: |
-            ['conventional-changelog-conventionalcommits@7']
+          # additional-packages: |
+          #   ['conventional-changelog-conventionalcommits@7']
           # plugins: |
           #   ['@semantic-release/git']
           # conventional-changelog-conventionalcommits@7
@@ -52,6 +52,40 @@ jobs:
           # tag_format: # optional
           # DEPRECATED. Will continue to be supported for v1. Use `branches` instead. Previously used in semantic-release v15 to set a single branch on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           # branch: # optional
+
+           additional-packages: |
+             ['conventional-changelog-conventionalcommits@7']
+           plugins: |
+             [
+               [
+                 "@semantic-release/commit-analyzer",
+                 {
+                   "preset": "conventionalcommits"
+                 }
+               ],
+               [
+                 "@semantic-release/release-notes-generator",
+                 {
+                   "preset": "conventionalcommits",
+                   "presetConfig": {
+                     "types": [
+                       { type: 'feat', section: 'Features', hidden: false },
+                       { type: 'fix', section: 'Bug Fixes', hidden: false },
+                       { type: 'perf', section: 'Performance Improvements', hidden: false },
+                       { type: 'revert', section: 'Reverts', hidden: false },
+                       { type: 'docs', section: 'Other Updates', hidden: false },
+                       { type: 'style', section: 'Other Updates', hidden: false },
+                       { type: 'chore', section: 'Other Updates', hidden: false },
+                       { type: 'refactor', section: 'Other Updates', hidden: false },
+                       { type: 'test', section: 'Other Updates', hidden: false },
+                       { type: 'build', section: 'Other Updates', hidden: false },
+                       { type: 'ci', section: 'Other Updates', hidden: false }
+                     ]
+                   }
+                 }
+               ],
+               '@semantic-release/github'
+             ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
