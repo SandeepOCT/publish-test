@@ -35,7 +35,7 @@ jobs:
           # List of modules or file paths containing . https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#extends
           # extends: # optional
           # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
-          additional-packages: |
+          additional_packages: |
             ['conventional-changelog-conventionalcommits@6']
           # plugins: |
           #   ['@semantic-release/git']
