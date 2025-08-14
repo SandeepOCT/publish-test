@@ -36,7 +36,7 @@ jobs:
           # extends: # optional
           # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
           additional_packages: |
-            ['conventional-changelog-conventionalcommits@6']
+            ['conventional-changelog-conventionalcommits@6', '@semantic-release/changelog']
           # plugins: |
           #   ['@semantic-release/git']
           # conventional-changelog-conventionalcommits@7
