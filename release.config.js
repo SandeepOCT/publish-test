@@ -47,13 +47,13 @@ module.exports = {
         },
       },
     ],
-    [
-      // This plugin is responsible for updating the `CHANGELOG.md` file with the release notes.
-      '@semantic-release/changelog',
-      {
-        changelogFile: 'CHANGELOG.md',
-      },
-    ],
+    // [
+    //   // This plugin is responsible for updating the `CHANGELOG.md` file with the release notes.
+    //   '@semantic-release/changelog',
+    //   {
+    //     changelogFile: 'CHANGELOG.md',
+    //   },
+    // ],
     // This plugin is responsible for publishing the package to npm.
     '@semantic-release/npm',
     [
