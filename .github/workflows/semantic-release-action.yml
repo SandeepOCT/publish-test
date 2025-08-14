@@ -24,15 +24,15 @@ jobs:
         # You may pin to the exact commit or the version.
         # uses: codfish/semantic-release-action@cbd853afe12037afb1306caca9d6b1ab6a58cf2a
         uses: codfish/semantic-release-action@v1
-        with:
+        # with:
           # The branches on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           # branches: # optional
           # List of modules or file paths containing . https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#extends
           # extends: # optional
           # Define the list of plugins to use. Plugins will run in series, in the order defined, for each steps if they implement it. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#plugins
-          extra_plugins: |
-            @semantic-release/changelog@6.0.0
-            @semantic-release/git
+          # plugins: |
+          #   ['@semantic-release/changelog@6.0.0'
+          #   @semantic-release/git
           # Define a list of additional plugins or shareable configurations (official or community) to install. Use this if you 1) use any plugins other than commit-analyzer, release-notes-generator, github, or npm, which are already installed along with semantic-release or 2) want to extend from a shareable configuration. https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
           # additional_packages: # optional
           # The objective of the dry-run mode is to get a preview of the pending release. Dry-run mode skips the following steps: prepare, publish, success and fail. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#dryrun
@@ -43,6 +43,14 @@ jobs:
           # tag_format: # optional
           # DEPRECATED. Will continue to be supported for v1. Use `branches` instead. Previously used in semantic-release v15 to set a single branch on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           # branch: # optional
+
+      - name: Print 
+        continue-on-error: true
+        run: echo ${{ steps.semantic.outputs.release-version }}
+
+      - name: Print env
+        continue-on-error: true
+        run: printenv
           
 
           
