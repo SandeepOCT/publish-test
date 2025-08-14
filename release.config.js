@@ -55,7 +55,7 @@ module.exports = {
       },
     ],
     // This plugin is responsible for publishing the package to npm.
-    // '@semantic-release/npm',
+    '@semantic-release/npm',
     [
       // This plugin is responsible for committing the changes made by the previous plugins.
       '@semantic-release/git',
