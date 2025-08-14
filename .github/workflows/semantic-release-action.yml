@@ -53,7 +53,7 @@ jobs:
           # DEPRECATED. Will continue to be supported for v1. Use `branches` instead. Previously used in semantic-release v15 to set a single branch on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           # branch: # optional
 
-           additional-packages: |
+           additional_packages: |
              ['conventional-changelog-conventionalcommits@6']
            plugins: |
              [
