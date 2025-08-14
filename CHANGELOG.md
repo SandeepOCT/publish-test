@@ -1,3 +1,18 @@
+## [2.16.0](https://github.com/SandeepOCT/publish-test/compare/v2.15.0...v2.16.0) (2025-08-14)
+
+
+### Features
+
+* **semrel:** ✨ update to v3 ([aa7e181](https://github.com/SandeepOCT/publish-test/commit/aa7e181f1a0ba3550f449d264dd8d47367b0e1ac))
+* **semrel:** Update semantic-release-action.yml ([#25](https://github.com/SandeepOCT/publish-test/issues/25)) ([5e20348](https://github.com/SandeepOCT/publish-test/commit/5e20348798b6fab2d306fdfeb5e8748b6bff69f4))
+
+
+### Bug Fixes
+
+* **semrel:** 🐛 add change log ([#26](https://github.com/SandeepOCT/publish-test/issues/26)) ([a0535b1](https://github.com/SandeepOCT/publish-test/commit/a0535b1256d4f51573fc134969d46f5fa8b08658))
+* **semrel:** add additional packges ([e1a58fc](https://github.com/SandeepOCT/publish-test/commit/e1a58fcc82f433c2088ba3cca3c3b8800e1eeec4))
+* **semrel:** underscore goes ([e221c62](https://github.com/SandeepOCT/publish-test/commit/e221c62bf68dc554df1ba42db0712706b09e5ef3))
+
 # ChangeLOG
 
 it will contain logs
