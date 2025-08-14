@@ -1,3 +1,10 @@
+## [2.17.3](https://github.com/SandeepOCT/publish-test/compare/v2.17.2...v2.17.3) (2025-08-14)
+
+
+### Bug Fixes
+
+* **publish:** 🐛 enable publishing ([6af6e16](https://github.com/SandeepOCT/publish-test/commit/6af6e168f707c15e3f910b5f83892ce9f0aaa002))
+
 ## [2.17.2](https://github.com/SandeepOCT/publish-test/compare/v2.17.1...v2.17.2) (2025-08-14)
 
 
