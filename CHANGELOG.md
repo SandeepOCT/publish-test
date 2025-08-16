@@ -1,3 +1,10 @@
+## [2.18.2](https://github.com/SandeepOCT/publish-test/compare/v2.18.1...v2.18.2) (2025-08-16)
+
+
+### Bug Fixes
+
+* 🐛 use specific docker image ([4e9e462](https://github.com/SandeepOCT/publish-test/commit/4e9e462edf91b525055fa93cd4d916cdcec6bcb4))
+
 ## [2.18.1](https://github.com/SandeepOCT/publish-test/compare/v2.18.0...v2.18.1) (2025-08-16)
 
 
