@@ -27,7 +27,9 @@ jobs:
       - name: Semantic Release Action
         # You may pin to the exact commit or the version.
         # uses: codfish/semantic-release-action@cbd853afe12037afb1306caca9d6b1ab6a58cf2a
-        uses: codfish/semantic-release-action@v3
+        # uses: codfish/semantic-release-action@v3# Recommended: Docker image digest from GitHub Container Registry (best for speed & security)
+        uses: docker://ghcr.io/codfish/semantic-release-action@sha256:4c0955361cf42e5ab9bb05df3a1e2a781c443f9760b63a68957689445051a2fb
+
         with:
           # The branches on which releases should happen. https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#branches
           # branches: # optional
