@@ -1,3 +1,30 @@
+## [2.19.0](https://github.com/SandeepOCT/publish-test/compare/v2.18.3...v2.19.0) (2025-08-16)
+
+
+### Features
+
+* New Feature ([12ac0c7](https://github.com/SandeepOCT/publish-test/commit/12ac0c7dd2973fe39dd2618cb0f7dc7eb7d309ea))
+
+
+### Bug Fixes
+
+* Bug Fix ([9306659](https://github.com/SandeepOCT/publish-test/commit/930665994ea0d3b19c9861f81dc3705b718419b7))
+
+
+### Other Changes
+
+* Build System ([556fee9](https://github.com/SandeepOCT/publish-test/commit/556fee9729c86da9a13a2cc7c1186dbb55bf046e))
+* Code Refactoring ([b015275](https://github.com/SandeepOCT/publish-test/commit/b01527577b757adaa4a981a4157b69ea854b358f))
+* Code Style ([a1f5690](https://github.com/SandeepOCT/publish-test/commit/a1f56900084379f059fd05d281583dfbcaf175dc))
+* Documentation Update ([f409a89](https://github.com/SandeepOCT/publish-test/commit/f409a89b18f12f7744cc7035a2566fab0b4a9805))
+* Maintenance ([189e6b1](https://github.com/SandeepOCT/publish-test/commit/189e6b1cc6bcf86fb4b9579abe0cbc9fd1a7c1fd))
+* Performance Improvements ([b79782a](https://github.com/SandeepOCT/publish-test/commit/b79782ae830303febc403e69a422d9a809884fcf))
+
+
+### CI
+
+* Continuous Integration ([fceaaa8](https://github.com/SandeepOCT/publish-test/commit/fceaaa80241f612778c2a669c690c77a4389ab3e))
+
 ## [2.18.3](https://github.com/SandeepOCT/publish-test/compare/v2.18.2...v2.18.3) (2025-08-16)
 
 
