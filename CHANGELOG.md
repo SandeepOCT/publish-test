@@ -1,3 +1,10 @@
+## [2.18.1](https://github.com/SandeepOCT/publish-test/compare/v2.18.0...v2.18.1) (2025-08-16)
+
+
+### Bug Fixes
+
+* **semrel:** 🐛 give write permissions to packages ([7132538](https://github.com/SandeepOCT/publish-test/commit/71325389519712d106c124c97f686820eab0c110))
+
 ## [2.18.0](https://github.com/SandeepOCT/publish-test/compare/v2.17.3...v2.18.0) (2025-08-16)
 
 
