@@ -1,3 +1,10 @@
+## [2.18.3](https://github.com/SandeepOCT/publish-test/compare/v2.18.2...v2.18.3) (2025-08-16)
+
+
+### Bug Fixes
+
+* 🐛 use github token for publishing ([a157e64](https://github.com/SandeepOCT/publish-test/commit/a157e6408ca92f1854120bb6d5371700c1c3369c))
+
 ## [2.18.2](https://github.com/SandeepOCT/publish-test/compare/v2.18.1...v2.18.2) (2025-08-16)
 
 
