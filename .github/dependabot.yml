@@ -10,13 +10,13 @@ registries:
     token: ${{ secrets.VAULT_OPS_GITHUB_BUILD_TOKEN }}
 
 updates:
-  # 
   - package-ecosystem: npm
     directory: /
     registries:
       - gh-pkgs
     schedule:
-      interval: daily
+      interval: weekly
+      day: monday
     groups:
       # Group for all prism related packages updates
       prism:
