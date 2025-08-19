@@ -19,7 +19,9 @@
     "url": "https://github.com/SandeepOCT/publish-test/issues"
   },
   "homepage": "https://github.com/SandeepOCT/publish-test#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "@octanner/prism-icons": "^1.18.3"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }
