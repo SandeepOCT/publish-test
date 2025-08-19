@@ -17,16 +17,6 @@ updates:
       - gh-pkgs
     schedule:
       interval: daily
-    allow:
-      - dependency-name: '@octanner/prism-*'
-  
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: daily
-    ignore:
-      - dependency-name: '@octanner/prism-*'
-
     groups:
       # Group for all prism related packages updates
       prism:
