@@ -8,7 +8,7 @@ registries:
   gh-pkgs:
     type: npm-registry
     url: https://npm.pkg.github.com/
-    token: ${{ secrets.OCT_VAULT_OPS_GITHUB_BUILD_TOKEN }}
+    token: ${{ secrets.GITHUB_TOKEN }}
 
 updates:
   # 
