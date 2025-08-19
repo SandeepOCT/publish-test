@@ -19,20 +19,22 @@
     "url": "https://github.com/SandeepOCT/publish-test/issues"
   },
   "homepage": "https://github.com/SandeepOCT/publish-test#readme",
-  "devDependencies": {
+  "dependencies": {
     "@octanner/prism-core": "^12.0.3",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
     "nodemon": "^3.0.0",
     "prettier": "^3.2.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
     "supertest": "^7.1.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^3.0.0",
-    "vitest": "^3.1.2",
-    "winston": "^3.0.0"
+    "vitest": "^3.1.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
