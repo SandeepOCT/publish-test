@@ -1,3 +1,33 @@
+## [2.20.0](https://github.com/SandeepOCT/publish-test/compare/v2.19.0...v2.20.0) (2025-08-22)
+
+
+### Features
+
+* ✨ sparkly ([d495063](https://github.com/SandeepOCT/publish-test/commit/d495063ac7826047487084a0ce015de8545b78d0))
+* New Feature ([9cdc346](https://github.com/SandeepOCT/publish-test/commit/9cdc346256337e4f45f976e0b102a6f0a83517d1))
+
+
+### Bug Fixes
+
+* Bug Fix ([29e1f34](https://github.com/SandeepOCT/publish-test/commit/29e1f348be563260da950d15d73a1f2a14725fe6))
+* **bug:** bugggy ([d738dd0](https://github.com/SandeepOCT/publish-test/commit/d738dd0dabc56338d76287b04a511443cdd0903c))
+
+
+### Other Changes
+
+* Build System ([9b6d01a](https://github.com/SandeepOCT/publish-test/commit/9b6d01aeb871b7817a420ba278d08b9f8ee968b3))
+* Code Refactoring ([be1471a](https://github.com/SandeepOCT/publish-test/commit/be1471a65f9ae976d6899b0935aed71ac98c7e66))
+* Code Style ([ed97f5d](https://github.com/SandeepOCT/publish-test/commit/ed97f5dc9c18e9f8ba7b794d4b647cee69813fb0))
+* Documentation Update ([65e1969](https://github.com/SandeepOCT/publish-test/commit/65e1969ab00d0feea1b93167f63f8df5b168c8fd))
+* Maintenance ([8660e6d](https://github.com/SandeepOCT/publish-test/commit/8660e6dc6c8b7ba9ba10ee55b9fc34f749672c80))
+* Performance Improvements ([bb8ec28](https://github.com/SandeepOCT/publish-test/commit/bb8ec2817a31a536e9f0de5bb738697d6b57f4aa))
+* remove packages ([1448430](https://github.com/SandeepOCT/publish-test/commit/1448430d2e4caf345b01ce37f4126b7cf0402edc))
+
+
+### CI
+
+* Continuous Integration ([acf8dd0](https://github.com/SandeepOCT/publish-test/commit/acf8dd06bb5eeb9a6a72769263606bf29888318f))
+
 ## [2.19.0](https://github.com/SandeepOCT/publish-test/compare/v2.18.3...v2.19.0) (2025-08-16)
 
 
