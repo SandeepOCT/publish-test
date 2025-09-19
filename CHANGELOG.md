@@ -1,3 +1,10 @@
+## [2.20.2](https://github.com/SandeepOCT/publish-test/compare/v2.20.1...v2.20.2) (2025-09-19)
+
+
+### Bug Fixes
+
+* trincking ([26896e5](https://github.com/SandeepOCT/publish-test/commit/26896e5b5ea8a5a3eb9ad5d9b7696a1fb7099046))
+
 ## [2.20.1](https://github.com/SandeepOCT/publish-test/compare/v2.20.0...v2.20.1) (2025-09-19)
 
 
