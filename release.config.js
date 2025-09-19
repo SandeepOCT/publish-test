@@ -21,7 +21,7 @@ const releseNotesTypes = [
   { type: 'ci', section: 'CI', hidden: false },
 ];
 
-const config = {
+module.exports = {
   branches: ['main'],
   plugins: [
     [
@@ -69,5 +69,3 @@ const config = {
     '@semantic-release/github',
   ],
 };
-
-export default config;
