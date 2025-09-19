@@ -1,3 +1,10 @@
+## [2.20.1](https://github.com/SandeepOCT/publish-test/compare/v2.20.0...v2.20.1) (2025-09-19)
+
+
+### Bug Fixes
+
+* 🐛 experimenting with husky ([15a1140](https://github.com/SandeepOCT/publish-test/commit/15a11409dc85089da6d8837c21843794baa8977b))
+
 ## [2.20.0](https://github.com/SandeepOCT/publish-test/compare/v2.19.0...v2.20.0) (2025-08-22)
 
 
