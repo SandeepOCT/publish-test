@@ -4,17 +4,26 @@ on:
   #     - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  packages: write
-
 name: semantic release action
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      packages: write
+
+    env:
+      # This is used to set the author and committer information for semantic release commits
+      # If environment variables are not set, committer will be in the name of Semantic Release Bot instead of the GitHub Actions bot
+      GIT_AUTHOR_NAME: "sbot"
+      GIT_AUTHOR_EMAIL: "sbot@ta.com"
+      GIT_COMMITTER_NAME: "sbot"
+      GIT_COMMITTER_EMAIL: "sbot@ta.com"
+
     steps:
       # Checkout the repository
       - name: Checkout repository
