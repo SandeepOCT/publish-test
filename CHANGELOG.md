@@ -1,3 +1,10 @@
+## [2.20.6](https://github.com/SandeepOCT/publish-test/compare/v2.20.5...v2.20.6) (2025-09-23)
+
+
+### Bug Fixes
+
+* adding github token to npmrc ([161a5dd](https://github.com/SandeepOCT/publish-test/commit/161a5dd4eb5578486f7292df5667c62a086a9c24))
+
 ## [2.20.5](https://github.com/SandeepOCT/publish-test/compare/v2.20.4...v2.20.5) (2025-09-23)
 
 
