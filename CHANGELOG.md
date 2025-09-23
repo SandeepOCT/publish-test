@@ -1,3 +1,10 @@
+## [2.20.4](https://github.com/SandeepOCT/publish-test/compare/v2.20.3...v2.20.4) (2025-09-23)
+
+
+### Bug Fixes
+
+* try removing configure git command ([1637aaf](https://github.com/SandeepOCT/publish-test/commit/1637aaf61ee5303716bc957aa3ce5bc549446c22))
+
 ## [2.20.3](https://github.com/SandeepOCT/publish-test/compare/v2.20.2...v2.20.3) (2025-09-23)
 
 
