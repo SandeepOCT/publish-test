@@ -1,3 +1,11 @@
+## [2.20.3](https://github.com/SandeepOCT/publish-test/compare/v2.20.2...v2.20.3) (2025-09-23)
+
+
+### Bug Fixes
+
+* checking the possiblity ([5b1d5f9](https://github.com/SandeepOCT/publish-test/commit/5b1d5f9136601d7bae3ccf43af44c6c0afe5a63e))
+* expermentating with configure ([58e7186](https://github.com/SandeepOCT/publish-test/commit/58e7186fe0cf847889ce3bebf75dcbaf3988f5fa))
+
 ## [2.20.2](https://github.com/SandeepOCT/publish-test/compare/v2.20.1...v2.20.2) (2025-09-19)
 
 
