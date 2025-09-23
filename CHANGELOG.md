@@ -1,3 +1,10 @@
+## [2.20.5](https://github.com/SandeepOCT/publish-test/compare/v2.20.4...v2.20.5) (2025-09-23)
+
+
+### Bug Fixes
+
+* commenting npmrc ([4b9836f](https://github.com/SandeepOCT/publish-test/commit/4b9836fd46b0525ea167662bcb996b76a798fe43))
+
 ## [2.20.4](https://github.com/SandeepOCT/publish-test/compare/v2.20.3...v2.20.4) (2025-09-23)
 
 
