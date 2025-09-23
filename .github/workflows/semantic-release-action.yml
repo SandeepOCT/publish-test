@@ -41,9 +41,9 @@ jobs:
       #     git config user.name ${{ env.GIT_AUTHOR_NAME }}
       #     git config user.email ${{ env.GIT_AUTHOR_EMAIL }}
 
-      # - name: Setup .npmrc
-      #   run: |
-      #     echo "//npm.pkg.github.com/:_authToken=${{ secrets.OBERTBOT_GITHUB_TOKEN }}" >> .npmrc
+      - name: Setup .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
 
       - name: Semantic Release Action
         # You may pin to the exact commit or the version.
