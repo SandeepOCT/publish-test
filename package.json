@@ -23,7 +23,7 @@
   "dependencies": {
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "winston": "^2.0.0"
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",
