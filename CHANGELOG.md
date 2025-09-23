@@ -1,3 +1,10 @@
+## [2.20.7](https://github.com/SandeepOCT/publish-test/compare/v2.20.6...v2.20.7) (2025-09-23)
+
+
+### Bug Fixes
+
+* reconfigure username ([e40375c](https://github.com/SandeepOCT/publish-test/commit/e40375ccef4c2de5f6a0dc9a142d052d15c01848))
+
 ## [2.20.6](https://github.com/SandeepOCT/publish-test/compare/v2.20.5...v2.20.6) (2025-09-23)
 
 
