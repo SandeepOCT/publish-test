@@ -2,7 +2,38 @@
 
 This is a test NPM library created for demonstration purposes. It provides basic functionality to showcase how to publish and use an NPM package.
 
-## Installation
+## New: gRPC Spring Boot Implementation
+
+This repository now also includes a complete **gRPC client and server implementation using Spring Boot**. 
+
+### Quick Start with gRPC
+
+```bash
+# Build and run the gRPC application
+./run.sh
+
+# Or manually:
+mvn clean compile
+mvn test
+mvn spring-boot:run
+```
+
+**Test the gRPC service via REST API:**
+```bash
+# Simple greeting
+curl "http://localhost:8080/greet?name=World"
+
+# Server streaming
+curl "http://localhost:8080/greet-stream?name=Stream"
+```
+
+For detailed gRPC documentation, see [GRPC_README.md](./GRPC_README.md).
+
+---
+
+## Original NPM Library
+
+### Installation
 
 Install the library using npm:
 
@@ -10,7 +41,7 @@ Install the library using npm:
 npm install test-npm-library
 ```
 
-## Usage
+### Usage
 
 Import the library and use its functionality:
 
@@ -21,12 +52,13 @@ const testLibrary = require('test-npm-library');
 testLibrary.exampleFunction();
 ```
 
-## Features
+### Features
 
 - Example function to demonstrate usage.
 - Lightweight and easy to use.
+- **NEW**: Complete gRPC implementation with Spring Boot
 
-## Development
+### Development
 
 To contribute or modify the library:
 
@@ -40,7 +72,7 @@ To contribute or modify the library:
   ```
 3. Make your changes and test locally.
 
-## Publishing
+### Publishing
 
 To publish a new version of the library:
 
@@ -50,6 +82,6 @@ To publish a new version of the library:
   npm publish
   ```
 
-## License
+### License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
